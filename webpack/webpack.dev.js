@@ -28,13 +28,11 @@ module.exports = merge(webpackCommon, {
     chunkFilename: '[name].[hash].js'
   },
   watchOptions: {
-    //不监听的node_modules目录下的文件,
     ignored: /node_modules/
   },
   devServer: {
-    contentBase: './devdist',
     host: '0.0.0.0',
-    index: './test.html'
+    historyApiFallback: true
   },
   mode: "development",
   devtool: 'inline-source-map',
